@@ -1,0 +1,6 @@
+@Shortify.Api_HostAddress = http://localhost:5005
+
+GET {{Shortify.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
