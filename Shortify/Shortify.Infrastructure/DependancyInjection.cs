@@ -72,7 +72,7 @@ public static class DependancyInjection
 
     public static void AddDatabaseContext(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("SqlServerConnection");
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
         
         ArgumentNullException.ThrowIfNullOrWhiteSpace(connectionString);
 
