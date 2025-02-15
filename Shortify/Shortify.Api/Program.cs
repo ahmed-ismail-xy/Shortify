@@ -15,5 +15,7 @@ public class Program
         var app = builder.Build();
 
         app.UseAppDefaults();
+
+        app.Run();
     }
 }

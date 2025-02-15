@@ -19,7 +19,10 @@ internal sealed class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGe
     {
         foreach (ApiVersionDescription description in _provider.ApiVersionDescriptions)
         {
-            options.SwaggerDoc(description.GroupName, CreateVersionInfo(description));
+            if (!options.SwaggerGeneratorOptions.SwaggerDocs.ContainsKey(description.GroupName))
+            {
+                options.SwaggerDoc(description.GroupName, CreateVersionInfo(description));
+            }
         }
     }
 

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Shortify.Api.Controllers;
 
 [ApiController]
-[Route("api/v{version:apiVersion}/\"[controller]\"/branchs")]
+[Route("api/v{version:apiVersion}/weatherForecast")]
 
 public class WeatherForecastController : ControllerBase
 {
