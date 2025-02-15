@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Shortify.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/v{version:apiVersion}/\"[controller]\"/branchs")]
+
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
