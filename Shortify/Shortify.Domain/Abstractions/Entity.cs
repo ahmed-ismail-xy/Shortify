@@ -13,9 +13,6 @@ public abstract class Entity
     public Guid Id { get; private set; }
     public DateTime CreatedAtUtc { get; private set; }
     public DateTime? UpdatedAtUtc { get; private set; }
-    public DateTime? DeletedAtUtc { get; private set; }
-    public DateTime? RestoredAtUtc { get; private set; }
-    public bool IsDeleted { get; private set; }
 
     private readonly List<IDomainEvent> _domainEvents = new();
     public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
