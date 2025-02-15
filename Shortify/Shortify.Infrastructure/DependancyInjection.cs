@@ -16,7 +16,7 @@ public static class DependancyInjection
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        AddPersistence(services, configuration);
+        AddPersistence(services);
 
         services.AddDatabaseContext(configuration);
 
@@ -25,7 +25,7 @@ public static class DependancyInjection
         return services;
     }
 
-    private static void AddPersistence(IServiceCollection services, IConfiguration configuration)
+    private static void AddPersistence(IServiceCollection services)
     {
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
 
